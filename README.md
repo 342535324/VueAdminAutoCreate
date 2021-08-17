@@ -36,5 +36,9 @@ DEMO施工中
 
 # **2.代码生成的工作流程**
 
+![工作流程](https://images.gitee.com/uploads/images/2021/0817/121259_2022b409_9598857.png "workflow.png")
+
+绿色代表原本交互的工作流程,黄色是VueAdminAutoCreate的工作流程
+
 目前支持生成的前端组件包括:el-date-picker,el-upload,tinymce,img,el-amap,el-input,el-select(含多选与联动)。
 
