@@ -1,266 +1,36 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.rs.code</groupId>
-	<artifactId>RS_GUGU</artifactId>
+	<artifactId>VueAdminAutoCreate</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-		<mysqlConnector.version>8.0.15</mysqlConnector.version>
-		<gson.version>2.8.5</gson.version>
-
-		<commonsLogging.version>1.2</commonsLogging.version>
-
-		<c3p0.version>0.9.5.4</c3p0.version>
-
-		<spring.version>5.1.6.RELEASE</spring.version>
-		<aspectjrt.version>1.9.3</aspectjrt.version>
-
-		<hibernateCommonsAnnotations.version>5.1.0.Final</hibernateCommonsAnnotations.version>
-		<hibernateValidator.version>6.0.16.Final</hibernateValidator.version>
-		<hibernateJpa.version>1.0.2.Final</hibernateJpa.version>
-		<hibernateCore.version>5.4.2.Final</hibernateCore.version>
-
-		<httpcore.version>4.4.11</httpcore.version>
-		<httpclient.version>4.5.8</httpclient.version>
-		<commonslang3.version>3.9</commonslang3.version>
-
-		<zxing.version>3.3.3</zxing.version>
-
-		<oss.version>3.4.2</oss.version>
-
-
-		<commonsIo.version>2.6</commonsIo.version>
-
-		<commonsFileupload.version>1.4</commonsFileupload.version>
-
-		<aliyun.version>4.1.0</aliyun.version>
-
-		<javaMail.version>1.5.0-b01</javaMail.version>
-		<alipay.version>4.8.103.ALL</alipay.version>
 	</properties>
 
-
-
 	<dependencies>
-
-		<!-- mysql链接驱动 -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysqlConnector.version}</version>
-		</dependency>
-
 		<!-- gson -->
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
-			<version>${gson.version}</version>
-		</dependency>
-
-		<!-- Commons-logging:apache最早提供的日志的门面接口。避免和具体的日志方案直接耦合。类似于JDBC 的api 接口，具体的的JDBC 
-			driver 实现由各数据库提供商实现。通过统一接口解耦，不过其内部也实现了一些简单日志方案 -->
-		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
-			<version>${commonsLogging.version}</version>
-		</dependency>
-
-		<!-- JDBC连接池 -->
-		<dependency>
-			<groupId>com.mchange</groupId>
-			<artifactId>c3p0</artifactId>
-			<version>${c3p0.version}</version>
-		</dependency>
-
-		<!-- Spring相关 -->
-		<!--这个jar文件是所有应用都要用到的，它包含访问配置文件、创建和管理bean以及进行Inversion of Control / Dependency 
-			Injection（IoC/DI）操作相关的所有类。如果应用只需基本的IoC/DI支持，引入spring-core.jar及spring-beans.jar文件就可以了。 -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-beans</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<!-- 这个jar文件为Spring核心提供了大量扩展。可以找到使用Spring ApplicationContext特性时所需的全部类，JDNI所需的全部类，UI方面的用来与模板（Templating）引擎如Velocity、FreeMarker、JasperReports集成的类，以及校验Validation方面的相关类。 -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context-support</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-
-		<!-- 这个jar文件包含Spring框架基本的核心工具类，Spring其它组件要都要使用到这个包里的类，是其它组件的基本核心，当然你也可以在自己的应用系统中使用这些工具类。 -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-expression</artifactId>
-			<version>${spring.version}</version>
+			<version>LATEST</version>
 		</dependency>
 
 		<!-- 这个jar文件包含Web应用开发时，用到Spring框架时所需的核心类，包括自动载入WebApplicationContext特性的类、Struts与JSF集成类、文件上传的支持类、Filter类和大量工具辅助类。 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
-			<version>${spring.version}</version>
+			<version>LATEST</version>
 		</dependency>
-		<!-- 这个jar文件包含Spring MVC框架相关的所有类。包含国际化、标签、Theme、视图展现的FreeMarker、JasperReports、Tiles、Velocity、XSLT相关类。当然，如果你的应用使用了独立的MVC框架，则无需这个JAR文件里的任何类。 -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-
-		<!-- AOP相关包 -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aop</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<!-- 事务相关包 -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<!-- orm相关包 -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-
-		<!-- aop的依赖 -->
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjrt</artifactId>
-			<version>${aspectjrt.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<version>${aspectjrt.version}</version>
-		</dependency>
-
-		<!-- Hibernate -->
-		<dependency>
-			<groupId>org.hibernate.common</groupId>
-			<artifactId>hibernate-commons-annotations</artifactId>
-			<version>${hibernateCommonsAnnotations.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate.validator</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>${hibernateValidator.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate.javax.persistence</groupId>
-			<artifactId>hibernate-jpa-2.1-api</artifactId>
-			<version>${hibernateJpa.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>${hibernateCore.version}</version>
-		</dependency>
-
-		<!--Apache的 http包 -->
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpcore</artifactId>
-			<version>${httpcore.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>${httpclient.version}</version>
-		</dependency>
+	
+		    
 		<!-- apache的包 跟java.lang这个包的作用类似，Commons Lang这一组API也是提供一些基础的、通用的操作和处理，如自动生成toString()的结果、自动实现hashCode()和equals()方法、数组操作、枚举、日期和时间的处理等等。 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>${commonslang3.version}</version>
-		</dependency>
-
-		<!-- 谷歌的二维码生成 -->
-		<dependency>
-			<groupId>com.google.zxing</groupId>
-			<artifactId>core</artifactId>
-			<version>${zxing.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.zxing</groupId>
-			<artifactId>javase</artifactId>
-			<version>${zxing.version}</version>
-		</dependency>
-
-		<!-- 阿里云oss -->
-		<dependency>
-			<groupId>com.aliyun.oss</groupId>
-			<artifactId>aliyun-sdk-oss</artifactId>
-			<version>${oss.version}</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>${commonsIo.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-			<version>${commonsFileupload.version}</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.aliyun</groupId>
-			<artifactId>aliyun-java-sdk-core</artifactId>
-			<version>${aliyun.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>javax.mail</groupId>
-			<artifactId>mail</artifactId>
-			<version>${javaMail.version}</version>
-		</dependency>
-
-		<!-- 支付宝 -->
-		<dependency>
-			<groupId>com.alipay.sdk</groupId>
-			<artifactId>alipay-sdk-java</artifactId>
-			<version>${alipay.version}</version>
-		</dependency>
-
-
-		<!-- unipush推送 -->
-		<dependency>
-			<groupId>com.gexin.platform</groupId>
-			<artifactId>gexin-rp-sdk-http</artifactId>
-			<version>4.1.1.0</version>
+			<version>LATEST</version>
 		</dependency>
 	</dependencies>
-
-	<repositories>
-		<repository>
-			<id>getui-nexus</id>
-			<url>http://mvn.gt.igexin.com/nexus/content/repositories/releases/</url>
-		</repository>
-	</repositories>
-
 </project>
