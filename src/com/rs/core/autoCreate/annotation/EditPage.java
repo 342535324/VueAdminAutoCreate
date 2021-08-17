@@ -6,7 +6,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * 有此注解会生成对应的form页面 注意:与@ApiContoller不兼容
+ * 有此注解会生成对应的form页面 注意:与@BasePage不兼容
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME) // 运行时注解
