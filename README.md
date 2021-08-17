@@ -12,5 +12,5 @@
 
 基于[VueAdmin](https://github.com/PanJiaChen/vue-element-admin)。
 
-基于Spring的注解(仅想要注解部分,如@RequestMapping,因为我需要读取到接口的URL)。
+基于Spring的注解(仅需要注解部分,如@RequestMapping,因为我需要读取到接口的URL)。
 
