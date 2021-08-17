@@ -77,14 +77,14 @@ DEMO施工中
 
 | 注解名称                        | 作用对象  | 注解说明                            |
 |-----------------------------|-------|---------------------------------|
-| [@FormEntityAttr]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttr.java            | 实体类属性 | 表格控制,有此注解表示是表显示用到的字段,生成el-input |
-| [@FormEntityAttrTypeDate]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeDate.java     | 实体类属性 | 日期选择组件(el-date-picker)          |
-| [@FormEntityAttrTypeFile]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeFile.java     | 实体类属性 | 文件上传,生成el-upload                |
-| [@FormEntityAttrTypeHtml]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeHtml.java     | 实体类属性 | 富文本编辑器,生成tinymce                |
-| [@FormEntityAttrTypeImg]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeImg.java      | 实体类属性 | 图片上传,生成el-upload与img组件          |
-| [@FormEntityAttrTypeLocation]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeLocation.java | 实体类属性 | 地图定位,生成el-amap                  |
-| [@FormEntityAttrTypeNum]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeNum.java      | 实体类属性 | 数字类型的el-input                   |
-| [@FormEntityAttrTypePassword]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypePassword.java | 实体类属性 | 密码输入框                           |
-| [@FormEntityAttrTypeReadOnly]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeReadOnly.java   | 实体类属性 | 备注说明,会生成到form的后面                 |
-| [@FormEntityAttrTypeSelect]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeSelect.java   | 实体类属性 | 选择框,生成el-select                 |
+| [@FormEntityAttr](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttr.java)            | 实体类属性 | 表格控制,有此注解表示是表显示用到的字段,生成el-input |
+| [@FormEntityAttrTypeDate](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeDate.java)     | 实体类属性 | 日期选择组件(el-date-picker)          |
+| [@FormEntityAttrTypeFile](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeFile.java)     | 实体类属性 | 文件上传,生成el-upload                |
+| [@FormEntityAttrTypeHtml](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeHtml.java)     | 实体类属性 | 富文本编辑器,生成tinymce                |
+| [@FormEntityAttrTypeImg](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeImg.java)      | 实体类属性 | 图片上传,生成el-upload与img组件          |
+| [@FormEntityAttrTypeLocation](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeLocation.java) | 实体类属性 | 地图定位,生成el-amap                  |
+| [@FormEntityAttrTypeNum](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeNum.java)      | 实体类属性 | 数字类型的el-input                   |
+| [@FormEntityAttrTypePassword](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypePassword.java) | 实体类属性 | 密码输入框                           |
+| [@FormEntityAttrTypeReadOnly](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeReadOnly.java)   | 实体类属性 | 备注说明,会生成到form的后面                 |
+| [@FormEntityAttrTypeSelect](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeSelect.java)   | 实体类属性 | 选择框,生成el-select                 |
 
