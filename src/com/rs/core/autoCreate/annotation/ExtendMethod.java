@@ -6,9 +6,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * 1个注解对应一个方法
+ * 拓展js方法,1个注解对应一个方法
  */
-
 @Documented
 @Retention(RetentionPolicy.RUNTIME) // 运行时注解
 @Repeatable(ExtendMethods.class)

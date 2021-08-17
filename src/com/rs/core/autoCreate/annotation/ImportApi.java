@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 导入api
+ * 在页面(view)导入api(通过import函数)
  *
  */
 @Target({ ElementType.PARAMETER, ElementType.METHOD })
