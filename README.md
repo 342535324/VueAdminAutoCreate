@@ -50,41 +50,41 @@ DEMO施工中
 
 | 注解名称             | 作用对象  | 注解说明                                                                                                                                                              |
 |------------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @BasePage        | 接口的类  | 有此注解表示是后台用到的API,会根据此接口生成后台专用的api.js 根据selectListApi的链接生成list.vue  * 根据selectDetailsApi生成form.vue 根据addEntityApi生成add-form.vue  * 需要和 @ViewEntity一起用,与@FormPage不兼容 |
-| @ControllerLog   | 接口的类  | 授权模板用的注解 没有此注解的控制器不会生成页面                                                                                                                                          |
-| @EditPage        | 接口的类  | 有此注解会生成对应的form页面 注意:与@BasePage不兼容                                                                                                                                                                                                                                                                    |
-| @RouterIndex     | 接口的类  | 路由排序 如果没有此注解 默认按名称排序                                                                                                                                              |
-| @RouterModelName | 接口的类  | 路由模块名称,相同会纳入同一个模块下面 如果没有此注解 默认控制器名称分组                                                                                                                             |
-| @ViewEntity      | 接口的类 | 根据此注解生成list.vue与form.vue,可以写在controller上,也可以写在selectListApi,selectDetailsApi,addEntityApi这三个接口对应的方法上,需要和@BasePage一起用       |                                                                                                                                        |
-| @ExtendMethod    | 接口的方法 | 拓展js方法,1个注解对应一个方法                                                                                                                                                 |
-| @ImportApi       | 接口的方法 | 在页面(view)导入api(通过import函数)     
-| @ViewConf    | 接口的方法 | 每个页面对应显示的标题   
+| [@BasePage](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/BasePage.java)        | 接口的类  | 有此注解表示是后台用到的API,会根据此接口生成后台专用的api.js 根据selectListApi的链接生成list.vue  * 根据selectDetailsApi生成form.vue 根据addEntityApi生成add-form.vue  * 需要和 [@ViewEntity](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/ViewEntity.java)一起用,与[@EditPage](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/EditPage.java)不兼容 |
+| [@ControllerLog](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/ControllerLog.java)   | 接口的类  | 授权模板用的注解 没有此注解的控制器不会生成页面                                                                                                                                          |
+| [@EditPage](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/EditPage.java)        | 接口的类  | 有此注解会生成对应的form页面 注意:与[@BasePage](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/BasePage.java)不兼容                                                                                                                                                                                                                                                                    |
+| [@RouterIndex](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/RouterIndex.java)     | 接口的类  | 路由排序 如果没有此注解 默认按名称排序                                                                                                                                              |
+| [@RouterModelName](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/RouterModelName.java) | 接口的类  | 路由模块名称,相同会纳入同一个模块下面 如果没有此注解 默认控制器名称分组                                                                                                                             |
+| [@ViewEntity](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/ViewEntity.java)      | 接口的类 | 根据此注解生成list.vue与form.vue,可以写在controller上,也可以写在selectListApi,selectDetailsApi,addEntityApi这三个接口对应的方法上,需要和@BasePage一起用  |                                                                                                                          
+| [@ExtendMethod](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/ExtendMethod.java)    | 接口的方法 | 拓展js方法,1个注解对应一个方法   |                                                                                                                                           
+| [@ImportApi](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/ImportApi.java)       | 接口的方法 | 在页面(view)导入api(通过import函数)     
+| [@ViewConf](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/ViewConf.java)    | 接口的方法 | 每个页面对应显示的标题   
 
 
 3.2.针对列表页面(view/**/list.vue)的配置注解
 
 | 注解名称                   | 作用对象   | 注解说明                                                                                                                                |
 |------------------------|--------|-------------------------------------------------------------------------------------------------------------------------------------|
-| @ListEntityAttr        | 实体类的属性 | 表格控制,有此注解表示是表显示用到的字段,会通过接口返回的实体类的属性查找该注解,然后根据该注解生成后台用的view -该注解用在实体类的字段上                                                            |
-| @ListViewAddressFilter | 接口的方法  | 地址过滤属性 -该注解用在获取列表数据的方法上                                                                                                             |
-| @ListViewExportExcel   | 接口的方法  | 列表扩展 导出Excel -该注解用在获取列表数据的方法上 会将列表的所有参数传递到导出接口                                                                                      |
-| @ListViewFilter        | 接口的方法  | 过滤属性 -该注解用在获取列表数据的方法上                                                                                                               |
-| @ListViewOperation     | 接口的方法  | 默认是“编辑”,"删除",列表操作内容 -该注解用在获取列表数据的方法上,如果需要传参可用重写operation,list页面内置listQuery对象作为列表查询参数,在页面初始化的时候会把this.$route.query的内容同步到listQuery对象内 |
-| @ListViewSearch        | 接口的方法  | 字符串搜索                                                                                                                                                                                                                                                               |
+| [@ListEntityAttr](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/listPage/ListEntityAttr.java)        | 实体类的属性 | 表格控制,有此注解表示是表显示用到的字段,会通过接口返回的实体类的属性查找该注解,然后根据该注解生成后台用的view -该注解用在实体类的字段上                                                            |
+| [@ListViewAddressFilter](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/listPage/ListViewAddressFilter.java) | 接口的方法  | 地址过滤属性 -该注解用在获取列表数据的方法上                                                                                                             |
+| [@ListViewExportExcel](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/listPage/ListViewExportExcel.java)   | 接口的方法  | 列表扩展 导出Excel -该注解用在获取列表数据的方法上 会将列表的所有参数传递到导出接口                                                                                      |
+| [@ListViewFilter](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/listPage/ListViewFilter.java)        | 接口的方法  | 过滤属性 -该注解用在获取列表数据的方法上                                                                                                               |
+| [@ListViewOperation](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/listPage/ListViewOperation.java)     | 接口的方法  | 默认是“编辑”,"删除",列表操作内容 -该注解用在获取列表数据的方法上,如果需要传参可用重写operation,list页面内置listQuery对象作为列表查询参数,在页面初始化的时候会把this.$route.query的内容同步到listQuery对象内 |
+| [@ListViewSearch](https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/listPage/ListViewSearch.java)        | 接口的方法  | 字符串搜索                                                                                                                                                                                                                                                               |
 
 
 3.3.针对表单页面(view/**/add-form.vue 或 form.vue 或 edit.vue)的配置注解
 
 | 注解名称                        | 作用对象  | 注解说明                            |
 |-----------------------------|-------|---------------------------------|
-| @FormEntityAttr            | 实体类属性 | 表格控制,有此注解表示是表显示用到的字段,生成el-input |
-| @FormEntityAttrTypeDate     | 实体类属性 | 日期选择组件(el-date-picker)          |
-| @FormEntityAttrTypeFile     | 实体类属性 | 文件上传,生成el-upload                |
-| @FormEntityAttrTypeHtml     | 实体类属性 | 富文本编辑器,生成tinymce                |
-| @FormEntityAttrTypeImg      | 实体类属性 | 图片上传,生成el-upload与img组件          |
-| @FormEntityAttrTypeLocation | 实体类属性 | 地图定位,生成el-amap                  |
-| @FormEntityAttrTypeNum      | 实体类属性 | 数字类型的el-input                   |
-| @FormEntityAttrTypePassword | 实体类属性 | 密码输入框                           |
-| @FormEntityAttrTypeReadOnly   | 实体类属性 | 备注说明,会生成到form的后面                 |
-| @FormEntityAttrTypeSelect   | 实体类属性 | 选择框,生成el-select                 |
+| [@FormEntityAttr]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttr.java            | 实体类属性 | 表格控制,有此注解表示是表显示用到的字段,生成el-input |
+| [@FormEntityAttrTypeDate]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeDate.java     | 实体类属性 | 日期选择组件(el-date-picker)          |
+| [@FormEntityAttrTypeFile]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeFile.java     | 实体类属性 | 文件上传,生成el-upload                |
+| [@FormEntityAttrTypeHtml]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeHtml.java     | 实体类属性 | 富文本编辑器,生成tinymce                |
+| [@FormEntityAttrTypeImg]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeImg.java      | 实体类属性 | 图片上传,生成el-upload与img组件          |
+| [@FormEntityAttrTypeLocation]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeLocation.java | 实体类属性 | 地图定位,生成el-amap                  |
+| [@FormEntityAttrTypeNum]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeNum.java      | 实体类属性 | 数字类型的el-input                   |
+| [@FormEntityAttrTypePassword]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypePassword.java | 实体类属性 | 密码输入框                           |
+| [@FormEntityAttrTypeReadOnly]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeReadOnly.java   | 实体类属性 | 备注说明,会生成到form的后面                 |
+| [@FormEntityAttrTypeSelect]https://github.com/342535324/VueAdminAutoCreate/blob/main/src/com/rs/core/autoCreate/annotation/formPage/FormEntityAttrTypeSelect.java   | 实体类属性 | 选择框,生成el-select                 |
 
