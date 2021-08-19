@@ -1,3 +1,7 @@
+# 项目地址
+
+[github](https://github.com/342535324/VueAdminAutoCreate)/[gitee](https://gitee.com/mingyannu/VueAdminAutoCreate)
+
 # **VueAdminAutoCreate(施工中!!!)**
 
 通过工具类配合注解,生成项目管理平台的前端页面([VueAdmin](https://github.com/PanJiaChen/vue-element-admin))源码。
